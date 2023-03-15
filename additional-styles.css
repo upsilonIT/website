@@ -17,6 +17,144 @@
   transition: box-shadow 0.2s ease-in;
 }
 
+/* Animation for dropdown arrow in header nav */
+.main-header-nav-dropdown-toggle .nav-dropdown-icon {
+  transition: transform 0.2s ease-in-out;
+}
+.main-header-nav-dropdown-toggle.w--open .nav-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeInNav {
+  0% { opacity: 0; transform: translateY(16px); }   
+  100% { opacity: 1; transform: translateY(0); }
+}
+.main-header-nav-dropdown-toggle.w--open + .main-header-nav-dropdown-list {
+   animation: fadeInNav 0.2s ease-in-out;
+}
+@media (max-width: 991px) {
+  .main-header-nav-dropdown-toggle.w--open + .main-header-nav-dropdown-list {
+    animation: none;
+  }
+}
+
+.header-accordion-title-row.preview + .header-accordion-inner{
+  display: block; 
+}
+.header-accordion-title-row.active .header-accordion-icon{
+  transform: rotate(180deg);
+}
+
+/* Menu Button */
+.menu-button .menu-button-burger .menu-button-burger-item {
+  transition: transform 0.4s ease;
+}
+.menu-button.w--open .menu-button-burger .menu-button-burger-item.top {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-button.w--open .menu-button-burger .menu-button-burger-item.bottom {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.menu-button.w--open:hover {
+   background-color: #FFED00;
+}
+
+.scroll-hidden {
+   overflow: hidden; 
+}
+
+.w-nav-overlay {
+   background-color: rgba(0,0,0,0.3);
+  top: calc(100% - 1px);
+}
+
+.header.sticky:not(.mini) {
+  box-shadow: 0px -1px 0px 0px #1c1c1c inset; 
+}
+
+/* Pricing */
+.pricing-model-step-line {
+  background: linear-gradient(to right, transparent 50%, #1e1e1e 50%), linear-gradient(to right, #fff, #fff);
+  background-size: 12px 2px;
+}
+@media (max-width: 991px) {
+  .pricing-model-step-line {
+    background: linear-gradient(to bottom, transparent 50%, #1e1e1e 50%), linear-gradient(to bottom, #fff, #fff);
+    background-size: 100% 12px;
+  }
+}
+
+.pricing-teams-link.active {
+  background-color: #fff;
+  border-color: #fff;
+  color: #1e1e1e;
+}
+.pricing-teams-link.active .pricing-team-divider{
+  border-color: #1e1e1e;
+}
+.pricing-teams-link.active .pricing-teams-check,
+.pricing-teams-link:hover .pricing-teams-check{
+  border-color: #1e1e1e;
+  background-color: #FFED00;
+}
+.pricing-teams-link.active .pricing-teams-check .pricing-teams-check-white,
+.pricing-teams-link:hover .pricing-teams-check .pricing-teams-check-white{
+  display: none;
+}
+.pricing-teams-link.active .pricing-teams-check .pricing-teams-check-black,
+.pricing-teams-link:hover .pricing-teams-check .pricing-teams-check-black{
+  display: block;
+}
+
+.pricing-teams-link.active .pricing-team-image-wrapper.empty{
+  border-color: #1e1e1e;
+}
+.pricing-teams-link.active .pricing-team-person-white{
+  display: none;
+}
+.pricing-teams-link.active .pricing-team-person-black{
+  display: block;
+}
+
+/* process schemes */
+.agile-process-horizontal {
+  width: calc(200% + 160px);
+  background-image: repeating-linear-gradient(90deg, #1c1c1c, #1c1c1c 4px, transparent 4px, transparent 8px);
+}
+
+.agile-process-horizontal-start,
+.agile-process-horizontal-finish {
+  background-image: repeating-linear-gradient(0deg, #1c1c1c, #1c1c1c 4px, transparent 4px, transparent 8px);
+}
+
+.agile-process-arrow-back {
+  background-image: repeating-linear-gradient(0deg, #1c1c1c, #1c1c1c 4px, transparent 4px, transparent 8px);
+}
+
+.agile-process-arrow-back-top,
+.agile-process-arrow-back-bottom {
+  background-image: repeating-linear-gradient(90deg, #1c1c1c, #1c1c1c 4px, transparent 4px, transparent 8px);
+}
+
+/* Our Success Stories (Cases) */
+@media (min-width: 1280px) {
+  .our-success-stories{
+    grid-column-gap: 48px; 
+  }
+  .our-success-stories-item.small,
+  .our-success-stories-cases-link{
+    width: calc(44% - 24px); 
+  }
+  
+  .our-success-stories-item.large {
+    width: calc(56% - 24px); 
+  }
+}
+.our-success-stories-item:hover .our-success-stories-title{
+  transition: box-shadow 0.2s ease-in;
+  box-shadow: 0 -2px 0 0 inset #fff;
+}
+
 /* HubSpot Cookie Banner */
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom {
   box-shadow: none !important;
