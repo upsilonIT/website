@@ -1,0 +1,18 @@
+/* Blog Post Animation */
+.post-link .post-list-image-wrapper .post-list-image,
+.main-featured-link .main-featured-image-wrapper > .main-featured-image{
+  transition: transform 2s ease-out;
+}
+.post-link:hover .post-list-image-wrapper .post-list-image,
+.main-featured-link:hover .main-featured-image-wrapper > .main-featured-image{
+  transform: scale(1.2);
+}
+.post-link .post-name-wrapper .h5,
+.main-featured-title-wrapper .h4 {
+  display: inline;
+}
+.post-link:hover .post-name-wrapper .h5,
+.main-featured-link:hover .main-featured-info-wrapper .main-featured-title-wrapper .h4 {
+  box-shadow: 0 -2px 0 0 inset #1e1e1e;
+  transition: box-shadow 0.2s ease-in;
+}
